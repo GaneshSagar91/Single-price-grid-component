@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+body{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(204, 43%, 93%);
+}
+
+main.wrapper{
+  width: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+  border-radius: 5px;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
+}
+section{
+  padding: 30px;
+  color: white;
+}
+section.intro{
+  grid-column: span 2;
+  background-color: white;
+  border-radius: 5px 5px 0 0;
+}
+.intro h2{
+ color: hsl(179, 62%, 43%);
+}
+.intro h3{
+  color: hsl(71, 73%, 54%);
+  margin: 20px 0 10px;
+}
+.intro p{
+  color: hsl(218, 22%, 67%);
+  line-height: 1.5;
+}
+
+section.pricing{
+  background-color: hsl(179, 62%, 43%);
+  border-radius: 0 0 0 5px;
+}
+.pricing .price{
+  margin: 15px 0 0;
+  color: hsl(204, 43%, 93%, .5);
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.pricing .price span{
+  font-size: 35px;
+  font-weight: 500;
+  color: white;
+}
+.pricing .access{
+ color: hsl(204, 43%, 93%, .9);
+ margin: 10px 0 30px;
+}
+.signup-btn{
+  width: 100%;
+  font: inherit;
+  border: none;
+  outline: none;
+  color:white;
+  background-color: hsl(71, 73%, 54%);
+  font-weight: 500;
+  padding: 13px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 1px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+section.outro{
+  background-color: hsl(179, 62%, 43%, .8);
+  border-radius: 0 0 5px 0;
+}
+
+.outro p{
+  color: hsl(204, 43%, 93%, .8);
+  margin: 15px 0 0;
+  line-height: 1.4;
+}
+
+@media screen and (max-width: 481px) { 
+  body{
+    padding: 40px 20px;
+  }
+  main.wrapper{
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  section.intro{
+    grid-column: auto;
+  }
+  section.pricing{
+    border-radius: 0;
+  }
+  section.outro{  
+    border-radius: 0 0 5px 5px;
+  }
+}
